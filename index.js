@@ -11,10 +11,10 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => tutorials.map(cb)
+const titleCased = () => tutorials.map(removeSpaces)
 
 
-const cb = (item) => item.split(" ").map(cb2).join(" ")
+const removeSpaces = (item) => item.split(" ").map(doTitleCase).join(" ")
 
 
-const cb2 = (item) => item.charAt(0).toUpperCase() + item.slice(1)
+const doTitleCase = (item) => item.charAt(0).toUpperCase() + item.slice(1)
